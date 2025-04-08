@@ -41,8 +41,9 @@ namespace Exam.UserManager.Service
             if (_userPermission.CanRead())
             {
                 //***
+
                 //TODO: Item 1: Implement the logic to get all users
-                IEnumerable<UserModel> user = null;
+                IEnumerable<UserModel> user = _userRepository.Get();
                 //***
 
                 if (user == null || !user.Any())
